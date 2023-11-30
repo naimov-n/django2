@@ -12,3 +12,7 @@ def news(request):
 
 def inobat(request):
     return HttpResponse('<h1>Hello</h1>')
+
+
+def contact(request):
+    return HttpResponse('<h1>Contacts here</h1>')
