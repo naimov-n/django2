@@ -5,4 +5,5 @@ urlpatterns = [
     path('', index),
     path('news/', news),
     path('inobat/', inobat)
+    path('hello/',news)
 ]
