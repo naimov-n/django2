@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'django1.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'django1',
+        'NAME': 'django2',
         'HOST': 'localhost',
         'PORT': '5432',
         'USER': 'postgres',
