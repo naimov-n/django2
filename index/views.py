@@ -1,13 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from index.models import *
 
 def index(request):
-    return HttpResponse('<h1>Hello Page home page</h1>')
+    return render(request, 'index/index.html')
 
 
 def news(request):
-    return HttpResponse('<h1>Hello Page News</h1>')
+
+    return render(request, 'index/simple.html')
 
 
 def inobat(request):
