@@ -55,11 +55,10 @@
 			<div class="fh5co-box">
 				<h3 class="heading">Categories</h3>
 				<ul>
-					<li><a href="#">Travel</a></li>
-					<li><a href="#">Style</a></li>
-					<li><a href="#">Photography</a></li>
-					<li><a href="#">Food &amp; Drinks</a></li>
-					<li><a href="#">Culture</a></li>
+                    {% for item in category %}
+					<li><a href="#">{{ item.name }}</a></li>
+                    {% endfor %}
+
 				</ul>
 			</div>
 			<div class="fh5co-box">
@@ -80,9 +79,10 @@
 			<div class="row">
 				<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
 				<ul class="fh5co-social">
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-instagram"></i></a></li>
+                    {% for item in social %}
+					<li><a href="#"><i class="icon-{{ item.icon }}"></i></a></li>
+                    {% endfor %}
+
 				</ul>
 				<div class="col-lg-12 col-md-12 text-center">
 					<h1 id="fh5co-logo"><a href="/">Magazine <sup>TM</sup></a></h1>

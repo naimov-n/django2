@@ -3,12 +3,17 @@ from django.http import HttpResponse
 from index.models import *
 
 def index(request):
-    return render(request, 'index/index.html')
+    social = Social.objects.filter(status=True)
+    category = Category.objects.filter(status=True)
+    news = News.objects.filter(status=True)
+    return render(request, 'index/index.html', {'social': social, 'category': category, 'news': news})
 
 
-def news(request):
-
-    return render(request, 'index/simple.html')
+def news(request, id):
+    social = Social.objects.filter(status=True)
+    category = Category.objects.filter(status=True)
+    news = News.objects.get(pk=id)
+    return render(request, 'index/simple.html', {'social': social, 'category': category, 'news': news})
 
 
 def inobat(request):
