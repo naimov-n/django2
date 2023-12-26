@@ -7,7 +7,7 @@
             {% for item in news %}
 			<article class="col-lg-3 col-md-3 col-sm-3  col-xs-6 col-xxs-12 animate-box">
 				<figure>
-					<a href="/news/{{ item.id }}">
+					<a href="/news/{{ item.slug }}">
                         {% if item.photo%}
                         <img src="{{ item.photo.url }}" alt="Image" class="img-responsive">
                         {% else %}

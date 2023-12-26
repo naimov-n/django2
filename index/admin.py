@@ -10,6 +10,7 @@ class NewsAdmin(admin.ModelAdmin):
     search_fields = ('title', 'content')
     list_editable = ('status',)
     list_filter = ('status', 'created_on')
+    prepopulated_fields = {'slug': ('title',)}
 
 
 class CategoryAdmin(admin.ModelAdmin):

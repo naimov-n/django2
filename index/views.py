@@ -12,7 +12,7 @@ def index(request):
 def news(request, id):
     social = Social.objects.filter(status=True)
     category = Category.objects.filter(status=True)
-    news = News.objects.get(pk=id)
+    news = News.objects.get(slug=id)
     return render(request, 'index/simple.html', {'social': social, 'category': category, 'news': news})
 
 

@@ -9,6 +9,7 @@ class News(models.Model):
     update_on = models.DateTimeField(auto_now=True)
     status = models.BooleanField(default=True, verbose_name="Статус")
     cat = models.ForeignKey('Category', on_delete=models.PROTECT, null=True, verbose_name="Категория")
+    slug = models.SlugField(max_length=255, db_index=True, null=True)
 
     def __str__(self):
         return self.title
